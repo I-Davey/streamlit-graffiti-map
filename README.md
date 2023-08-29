@@ -1,43 +1,49 @@
+# Eastern Fwy Graffiti Inspection App
+
+This Streamlit application provides an interactive map that displays graffiti inspection data for the Eastern Freeway on 09/02/2023. Users can toggle between inbound and outbound data, click on specific locations on the map, and view associated graffiti inspection videos.
+
+![App Screenshot](./showcase.jog)
 
 
-# Streamlit Graffiti Map 🗺️✍️
+## Features
 
-![Demo Image of the Streamlit App](path_to_demo_image.png) 
-> Replace `path_to_demo_image.png` with an actual image path for a demo/screenshot of your app for a better visual appeal.
+- **Interactive Map**: Utilizes the Folium library to render an interactive map showing graffiti inspection locations.
+- **Inbound/Outbound Toggle**: Users can switch between inbound and outbound data to view different sets of graffiti inspection points.
+- **Video Playback**: Upon clicking a specific location on the map, the application displays the associated graffiti inspection video.
 
-Visualize graffiti inspections along the Eastern Fwy as of 09/02/2023 with an interactive Streamlit application. Toggle between inbound and outbound views and get detailed views of graffiti spots including images and videos.
+## Data Source
 
-## 🌟 Features
+The application uses data from a CSV file that contains the following columns:
 
-- 🛣️ **Interactive Map**: Switch between inbound and outbound views of the Eastern Fwy.
-- 🎨 **Spot Details**: Click to see details like location, sqm, and job type (day/night).
-- 📸 **Media Playback**: Supports both images and videos for clearer graffiti insights.
-- 🖌️ **Data-Driven**: Reads from CSV to reflect the latest inspection updates.
-- 🌐 **Polished UI**: Optimized for wide screens with company logos and sleek elements.
+- `physical_coordinate`: The latitude and longitude of the graffiti location.
+- `type`: Specifies the type of media associated with the graffiti location (e.g., video).
+- `path`: Path to the media file associated with the graffiti location.
+- `loc_name`: Name/description of the graffiti location.
+- `is_day_job`: Specifies if the inspection was done during the day.
+- `direction`: Direction of the freeway (inbound/outbound).
 
-## 🚀 Getting Started
+## Setup and Installation
 
-### Prerequisites
+1. **Clone the Repository**: 
 
-- Ensure you have all the required libraries installed, like Streamlit, Pandas, Folium, etc.
+   ```
+   git clone https://github.com/I-Davey/streamlit-graffiti-map.git
+   ```
 
-### Installation & Setup
+2. **Navigate to the Directory**:
 
-1. Clone this repo:
-```bash
-git clone https://github.com/I-Davey/streamlit-graffiti-map.git
-cd streamlit-graffiti-map
-```
-2. Install required packages:
-```bash
-pip install -r requirements.txt
-```
-3. Replace the `maps_api_key` placeholder with your Google Maps API key.
-4. Run the Streamlit application:
-```bash
-streamlit run app.py
-```
+   ```
+   cd streamlit-graffiti-map
+   ```
 
-## 🚫 Safety Notice
+3. **Install Required Libraries**:
 
-The `maps_api_key` in the sample code is a placeholder. Always keep your API keys confidential to prevent misuse. Use environment variables or other methods to secure them.
+   ```bash
+   pip install streamlit folium pandas
+   ```
+
+4. **Run the Streamlit App**:
+
+   ```bash
+   streamlit run app.py
+   ```
