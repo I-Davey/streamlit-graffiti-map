@@ -2,7 +2,11 @@
 
 This Streamlit application provides an interactive map that displays graffiti inspection data for the Eastern Freeway on 09/02/2023. Users can toggle between inbound and outbound data, click on specific locations on the map, and view associated graffiti inspection videos.
 
-![App Screenshot](./showcase.jog)
+## Live Demo
+
+You can view a live demo of the application at [https://graffiti-map.streamlit.app/](https://graffiti-map.streamlit.app/).
+
+![App Screenshot](./showcase.jpg)
 
 
 ## Features
